@@ -1,0 +1,4 @@
+Ubuntu
+=====================
+fabric
+python-qt4
