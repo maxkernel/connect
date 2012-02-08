@@ -23,7 +23,7 @@ def deploy(path, name=None, cmd=CONFIG['default_cmd'], autostart=True):
 		put(path, '~/%(deploy_path)s/%(name)s' % args)
 	
 		if autostart:
-			run('/home/dklofas/Projects/maxkernel/src/utils/max-autostart -- max-client --archive=$HOME/%(deploy_path)s/%(name)s %(cmd)s' % args)
+			run('max-autostart -- max-client --archive=$HOME/%(deploy_path)s/%(name)s %(cmd)s' % args)
 	
 		run('max-client --daemon --archive=$HOME/%(deploy_path)s/%(name)s %(cmd)s' % args)
 	
